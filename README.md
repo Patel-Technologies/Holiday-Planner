@@ -53,6 +53,22 @@ A web application for planning and managing holidays with multiple users and gro
 ## Design
 <img src="Design.png"/>
 
+## Approach
+
+Our approach to building the Holiday Planner Web App involved several key steps and considerations:
+
+1. **Identifying the Problem:** I recognized the common challenge that many people face today—finding the time to plan holidays and ensuring that they get the best deals on travel and accommodations.
+
+2. **Idea Development:** I brainstormed ideas to address this problem and decided to create a web application that simplifies holiday planning, allows users to collaborate with friends and family, and provides notifications when travel prices decrease.
+
+3. **Technology Stack Selection:** I carefully selected the technology stack for both the frontend and backend of the application. This included choosing React and Redux for the frontend, Node.js and Express.js for the backend, and MongoDB for the database.
+
+4. **API Integration:** I integrated Plivo API to enhance the functionality of the application.
+
+5. **Security and Data Privacy:** Ensuring the security and privacy of user data was a top priority. I implemented secure authentication with OTP verification and followed best practices for data protection.
+
+6. **Documentation:** Comprehensive documentation was created to facilitate ease of use and future development of the application. This includes this README file, which provides detailed information on setup, usage, and guidelines.
+
 ## Technologies Used
 
 - **Frontend:** React, Redux
