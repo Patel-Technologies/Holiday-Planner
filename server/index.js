@@ -45,6 +45,12 @@ app.use('/api/', search);
 
 app.use('/api/groups', trip);
 
+app.get('/api/tripBookedData', async (req, res) => {
+  const tripId = req.query.tripId;
+  const bookedData = await BookedTrip.find({ tripId });
+  res.json(bookedData);
+});
+
 const getTripsForExpenseCheck = async () => {
 
   const tripsNeedingCheck = await Trip.find({ boolFind: false });
@@ -128,6 +134,7 @@ const sendBudgetExceededNotification = async (tripId) => {
     {
       answerMethod: "GET",
     },
+    time_limit = 20000
   ).then(function (response) {
     console.log(response);
     plivoClient.calls.speakText(
