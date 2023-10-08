@@ -52,6 +52,9 @@ A web application for planning and managing holidays with multiple users and gro
 5. **OTP Verification:**
    - Secure user registration with OTP verification via SMS (4-digit code).
 
+## Design
+<img src="Design.png"/>
+
 ## Technologies Used
 
 - **Frontend:** React, Redux
@@ -65,10 +68,6 @@ A web application for planning and managing holidays with multiple users and gro
 2. Install dependencies for both the frontend and backend.
 3. Configure environmental variables. (PLIVO_AUTH_ID, PLIVO_AUTH_TOKEN)
 4. Run the application.
-
-## Planned Trip
-
-- List Detail of the Planned Trips: `GET /api/tripBookedData/:tripId`
 
 ## OTP Verification
 
@@ -85,3 +84,18 @@ A web application for planning and managing holidays with multiple users and gro
 3. Plan trips, specifying details such as dates, source, destination, and budget.
 4. Check expenses regularly to ensure they are within budget.
 5. Receive notifications if budget fits under your budget.
+
+## List of APIs
+- User Registration: `POST /api/register`
+- User Login: `POST /api/login`
+- User Profile: `GET /api/user/profile`
+- User Update Profile: `PUT /api/user/profile`
+- Create a Group: `POST /api/groups`
+- List User's Groups: `GET /api/groups`
+- Group Details: `GET /api/groups/:groupId`
+- Plan a Trip: `POST /api/groups/trips/:groupId`
+- List Trips: `GET /api/groups/trips`
+- Trip Details: `GET /api/groups/trips/:tripId`
+- Update Trip: `PUT /api/groups/trips/:tripId`
+- Delete Trip: `DELETE /api/groups/trips/:tripId`
+- List Detail of a Trip: `GET /api/tripBookedData/:tripId`
