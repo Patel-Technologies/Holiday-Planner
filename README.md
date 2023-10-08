@@ -7,15 +7,13 @@ A web application for planning and managing holidays with multiple users and gro
 - [Introduction](#introduction)
 - [Motivation](#motivation)
 - [Features](#features)
+- [Design](#design)
 - [Technologies Used](#technologies-used)
 - [Setup](#setup)
-- [User Management](#user-management)
-- [Group Management](#group-management)
-- [Trip Planning](#trip-planning)
-- [Budget Management](#budget-management)
 - [OTP Verification](#otp-verification)
 - [Notification](#Notification) 
 - [Usage](#usage)
+- [List of APIs](#list-of-apis)
 
 ## Introduction
 
