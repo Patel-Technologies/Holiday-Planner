@@ -81,6 +81,7 @@ const calculateTotalExpensesForTrip = async (tripId) => {
 
   const bookedTrip = new BookedTrip({
     groupId: trip.groupId,
+    tripId: trip._id,
     goingDate: trip.goingDate,
     returnDate: trip.returnDate,
     sourceCity: trip.sourceCity,

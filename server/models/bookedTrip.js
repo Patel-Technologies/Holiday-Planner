@@ -3,6 +3,7 @@ const Schema = mongoose.Schema;
 
 const BookedTripSchema = new Schema({
     groupId: { type: mongoose.Schema.Types.ObjectId, ref: 'Group' },
+    tripId: { type: mongoose.Schema.Types.ObjectId, ref: 'Trip' },
     goingDate: Date,
     returnDate: Date,
     sourceCity: String,
