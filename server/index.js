@@ -22,8 +22,8 @@ require('dotenv').config();
 const plivo = require('plivo');
 
 const plivoClient = new plivo.Client(
-  "MAOTHIODFMOWUTZMFLZS",
-  "MTEzMjI5Y2EtNTkxOS00ZDBjLWE2YjItNTM3MGYy"
+  process.env.PLIVO_AUTH_ID,
+  process.env.PLIVO_AUTH_TOKEN
 );
 
 const uri = "mongodb+srv://patidar:patel@holidayplanner.9zrhsjn.mongodb.net/?retryWrites=true&w=majority";
