@@ -11,6 +11,7 @@ const TripSchema = new Schema({
     hotelPreferences: String,
     tripName: String,
     budget: Number,
+    boolFind: Boolean,
 });
 
 module.exports = mongoose.model("Trip", TripSchema);

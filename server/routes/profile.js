@@ -2,7 +2,7 @@ var express = require('express');
 const User = require('../models/user');
 var router = express.Router();
 
-router.post('/user/profile', async (req, res) => {
+router.post('/', async (req, res) => {
   const { name, age, gender, dob, email, userId } = req.body;
 
   try {
@@ -26,7 +26,7 @@ router.post('/user/profile', async (req, res) => {
   }
 });
 
-router.put('/user/profile', async (req, res) => {
+router.put('/', async (req, res) => {
   try {
     const { userId } = req.query;
     const { name, age, gender, dob, contactNo, email } = req.body;
@@ -40,7 +40,7 @@ router.put('/user/profile', async (req, res) => {
   }
 });
 
-router.get('/user/profile', async (req, res) => {
+router.get('/', async (req, res) => {
   const { userId } = req.query;
 
   const dbUser = await User.findById(userId);

@@ -4,7 +4,7 @@ const Trip = require('../models/trip');
 
 router.post('/trips', async (req, res) => {
   try {
-    const {groupId} = req.query;
+    const { groupId } = req.query;
     const {
       goingDate,
       returnDate,
@@ -27,6 +27,7 @@ router.post('/trips', async (req, res) => {
       tripName,
       budget,
     });
+    trip.boolFind = false;
 
     await trip.save();
     res.status(201).json({ message: 'Trip created successfully' });
@@ -38,7 +39,7 @@ router.post('/trips', async (req, res) => {
 
 router.get('/trips', async (req, res) => {
   try {
-    const {groupId} = req.query;
+    const { groupId } = req.query;
 
     const groupTrips = await Trip.find({ groupId });
 
@@ -51,7 +52,7 @@ router.get('/trips', async (req, res) => {
 
 router.get('/tripDetail/', async (req, res) => {
   try {
-    const {tripId} = req.query;
+    const { tripId } = req.query;
     const trip = await Trip.findById(tripId).populate('groupId', 'name members');
 
     if (!trip) {
@@ -65,9 +66,9 @@ router.get('/tripDetail/', async (req, res) => {
   }
 });
 
-router.put('/trip/', async (req, res) => {
+router.put('/trips/', async (req, res) => {
   try {
-    const {tripId} = req.query;
+    const { tripId } = req.query;
     const {
       goingDate,
       returnDate,
@@ -88,6 +89,7 @@ router.put('/trip/', async (req, res) => {
       hotelPreferences,
       tripName,
       budget,
+      boolFind: false,
     });
 
     res.status(200).json({ message: 'Trip updated successfully' });
@@ -99,7 +101,7 @@ router.put('/trip/', async (req, res) => {
 
 router.delete('/trips/', async (req, res) => {
   try {
-    const {tripId} = req.query;
+    const { tripId } = req.query;
     await Trip.findByIdAndDelete(tripId);
 
     res.status(200).json({ message: 'Trip deleted successfully' });
