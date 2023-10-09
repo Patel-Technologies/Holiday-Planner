@@ -34,8 +34,8 @@ router.get('/params/', async (req, res) => {
 
 router.get('/', async (req, res) => {
     try {
-        const {userId} = req.params;
-        const userGroups = await Group.find({ members: userId });
+        const {userId} = req.query;
+        const userGroups = await Group.find({ owner: userId });
 
         res.json(userGroups);
     } catch (error) {
