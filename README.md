@@ -2,6 +2,9 @@
 
 A web application for planning and managing holidays with multiple users and groups.
 
+Github Link: [link](https://github.com/Patel-Technologies/Holiday-Planner)
+Demo Video Link: [link](https://www.loom.com/share/07b44c18f8104979a5490a9b3d80c668?sid=2008645c-b395-4d70-b5cb-e59cb5bd6227)
+
 ## Table of Contents
 
 - [Introduction](#introduction)
